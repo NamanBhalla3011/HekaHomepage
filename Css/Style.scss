@@ -1,0 +1,634 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+$color1: #cd0a21;
+$color2: #ce0f25;
+$color3: #418ed8;
+$color4: #72a7d9;
+$color5: #2e3842;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 96%;
+	max-width: 1600px;
+	margin: auto;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	color: $color5;
+}
+ul {
+	list-style: none;
+}
+
+// HEADER
+nav {
+	background-color: white;
+
+	.container {
+		padding-top: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.site-toggle {
+		display: none;
+	}
+	.site-logo {
+		img {
+			width: 112px;
+		}
+	}
+
+	.nav-col {
+		width: 100%;
+		margin-left: 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.nav-links {
+			display: flex;
+
+			a {
+				color: black;
+				font-weight: 500;
+				margin-right: 26px;
+				font-size: 14px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&:hover,
+				&.active {
+					color: $color1;
+				}
+			}
+		}
+	}
+
+	.contact-info {
+		margin-left: 130px;
+		display: flex;
+		justify-content: end;
+
+		img {
+			width: 45px;
+			margin-right: 10px;
+		}
+
+		P {
+			font-size: 14px;
+			font-weight: 500;
+			&:first-child {
+				font-weight: bolder;
+				font-size: 13px;
+
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+// ABOUT HEKA
+section {
+	&#about {
+		padding: 100px 0;
+		background-image: url(/Images/Banner1.png);
+		background-size: cover;
+
+		.container {
+			display: flex;
+		}
+
+		.col {
+			width: 50%;
+			padding: 0 50px;
+
+			.about-image {
+				width: 100%;
+			}
+			p {
+				margin: 20px 0;
+			}
+			ul {
+				margin-top: 15px;
+				li {
+					margin-top: 5px;
+				}
+				li::before {
+					font-family: "FontAwesome";
+					content: "\f058";
+					color: $color4;
+					margin-right: 7px;
+					font-weight: 900;
+					font-size: 18 px;
+				}
+			}
+			.button {
+				background-color: $color3;
+				width: max-content;
+				padding: 12px;
+				color: white;
+				border-radius: 4px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+// SERVICES
+section {
+	&#services {
+		padding: 100px 0;
+		text-align: center;
+
+		h2 {
+			margin-bottom: 60px;
+			text-align: center;
+		}
+
+		.services-slider {
+			width: 90%;
+			max-width: 1300px;
+			margin: auto;
+			position: relative;
+			display: flex;
+			padding: 0 25px;
+
+			.owl-prev,
+			.owl-next {
+				position: absolute;
+				background-color: #f0b7bd;
+				box-shadow: 1px 6px 14px rgba(0, 0, 0, 0.1);
+				color: white;
+				border-radius: 50%;
+				color: white;
+				width: 50px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 35px;
+				line-height: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.owl-prev {
+				left: 0;
+				margin-left: -15px;
+			}
+
+			.owl-next {
+				right: 0;
+				margin-right: -15px;
+			}
+
+			.service {
+				margin: 5px;
+				padding: 25px;
+				box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+				text-align: center;
+				border: 1px solid rgba($color: #fff, $alpha: 0.2);
+				min-height: 200px;
+
+				img {
+					margin: auto;
+					width: 60px;
+					background-color: $color4;
+					border-radius: 4px;
+				}
+
+				h4 {
+					margin-top: 15px;
+					font-weight: 500;
+					text-align: center;
+				}
+
+				&:hover {
+					border: 1px solid rgba(0, 0, 0, 0.2);
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+// PARTNERS
+section {
+	&#partners {
+		padding: 100px 0;
+		text-align: center;
+		background-color: #f8f9fa;
+
+		h2 {
+			margin-bottom: 60px;
+			text-align: center;
+		}
+		.partner {
+			width: 90%;
+			max-width: 1300px;
+			margin: auto;
+			display: flex;
+			justify-content: space-around;
+
+			.owl-prev,
+			.owl-next {
+				position: absolute;
+				background-color: #f0b7bd;
+				box-shadow: 1px 6px 14px rgba(0, 0, 0, 0.1);
+				color: white;
+
+				border-radius: 50%;
+				width: 50px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 35px;
+				line-height: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.owl-prev {
+				left: 0;
+				margin-left: -15px;
+			}
+
+			.owl-next {
+				right: 0;
+				margin-right: -15px;
+			}
+			.col {
+				text-align: center;
+
+				img {
+					width: 150px;
+					margin: auto;
+					padding: 50px;
+					border-radius: 4px;
+					background-color: white;
+					border-radius: 50%;
+					box-shadow: 0px 0px 5px rgba($color: #000, $alpha: 0.1);
+				}
+				h4 {
+					margin-top: 15px;
+					font-weight: 500;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// FOOTER
+footer {
+	background-color: $color4;
+	color: white;
+	padding-top: 50px;
+
+	.site-footer {
+		display: flex;
+		justify-content: center;
+		text-align: justify;
+		border-bottom: 2px solid white;
+		padding-bottom: 40px;
+
+		.col {
+			h2 {
+				margin-bottom: 25px;
+				font-size: 20px;
+			}
+			.footer-links {
+				display: flex;
+				flex-direction: column;
+			}
+			a {
+				line-height: 2;
+				color: white;
+				font-size: 15px;
+			}
+		}
+		.col:first-child {
+			width: 25%;
+			padding-right: 20px;
+			img {
+				width: 100%;
+				background-color: white;
+				padding: 10px 100px;
+				border-radius: 20px;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 15px;
+			}
+		}
+		.col:nth-child(2) {
+			width: 15%;
+			padding: 0 20px;
+			a::before {
+				font-family: "FontAwesome";
+				content: "\f101";
+				margin-right: 5px;
+				font-weight: 900;
+				font-size: 13px;
+			}
+		}
+		.col:nth-child(3) {
+			width: 35%;
+			padding: 0 20px;
+			a::before {
+				font-family: "FontAwesome";
+				content: "\f101";
+				margin-right: 5px;
+				font-weight: 900;
+				font-size: 13px;
+			}
+		}
+		.col:last-child {
+			width: 25%;
+			padding: 0 20px;
+		}
+
+		.contact-address {
+			display: flex;
+			padding: 5px 0;
+			i {
+				font-size: 18px;
+				margin-right: 20px;
+			}
+			p {
+				font-size: 15px;
+			}
+		}
+		.social-icons {
+			a {
+				font-size: 20px;
+				padding: 20px 20px 0 0;
+			}
+		}
+	}
+
+	.policy {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0;
+		font-size: 15px;
+
+		a {
+			color: white;
+			padding: 0 5px;
+		}
+		a:last-child {
+			padding: 0;
+		}
+	}
+}
+// HERO CAROUSEL
+.carousel {
+	max-width: 100%;
+	position: relative;
+
+	.carousel-slide {
+		display: none;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.slide-left-arrow,
+.slide-right-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	transform: translateY(-50%);
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+.slide-left-arrow {
+	left: 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.slide-right-arrow {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.carousel-dot {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 40px;
+}
+
+.dot {
+	cursor: pointer;
+	height: 4px;
+	width: 25px;
+	background-color: #bbb;
+	display: inline-block;
+}
+
+.onscreen,
+.dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	nav {
+		.nav-col {
+			display: none;
+		}
+		.site-toggle {
+			display: flex;
+		}
+	}
+	
+	.carousel-dot {
+		margin-bottom: 10px;
+	}
+	// ABOUT HEKA
+	section {
+		&#about {
+			.col {
+				width: 50%;
+				// padding: 30px;
+			}
+		}
+	}
+
+	// SERVICES
+	section {
+		&#services {
+			// padding: 30px 0px;
+			h2 {
+				margin-bottom: 20px;
+			}
+			.service {
+				height: 240px;
+			}
+		}
+	}
+	// PARTNERS
+	section {
+		&#partners {
+			// padding: 30px 0px;
+			h2 {
+				margin-bottom: 20px;
+			}
+			.partner {
+				
+				.col {
+					img {
+						width: 100px;
+						padding: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	// FOOTER
+
+	footer {
+		.site-footer {
+			flex-direction: column;
+			padding-top: 0;
+			padding: 0 30px;
+			padding-bottom: 30px;
+			.col{
+				
+				h2{
+					margin: 20px 0 10px 0;
+				}
+			}
+			.col:first-child {
+				padding: 0;
+				width: 100%;
+	
+				img {
+					width: 350px;
+				}
+			}
+			.col:nth-child(2) {
+				padding: 0 ;
+				width: 100%;
+			}
+			.col:nth-child(3) {
+				padding: 0;
+				width: 100%;
+			}
+			.col:last-child {
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+	.policy{
+		flex-direction: column;
+		margin-left: 30px;
+		padding: 0;
+
+		p{
+			padding: 3px 0;
+		}
+		p:last-child{
+			padding-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	nav {
+		.nav-col {
+			display: none;
+		}
+		
+	}
+
+	// ABOUT HEKA
+	section {
+		&#about {
+			padding: 0;
+			.col {
+				width: 100%;
+				padding: 30px;
+			}
+		}
+	}
+	section {
+		&#services {
+			padding: 30px;
+			.col {
+				width: 100%;
+				padding: 30px;
+			}
+			.service{
+				height: 150px;
+			}
+		}
+	}
+	section {
+		&#partners {
+			padding: 30px;
+			.col {
+				width: 100%;
+				padding: 30px;
+			}
+			.partner{
+				.col{
+				padding: 0;
+			}}
+		}
+	}
+}
